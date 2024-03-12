@@ -4,60 +4,169 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .task5Form {
+        margin: auto;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #f6f6f6;
+      }
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .input {
+        width: 70%;
+        height: 100%;
+      }
+      .input-tel1 {
+        width: 5%;
+        height: 20px;
+      }
+      .input-tel2 {
+        width: 62.25%;
+        height: 20px;
+      }
+      .star {
+        color: red;
+      }
+      .input-container {
+        display: inline;
+      }
+      .imie {
+        margin-right: 58px;
+      }
+      .nazwisko {
+        margin-right: 24px;
+      }
+      .telefon {
+        margin-right: 38px;
+      }
+      .kod {
+        margin-right: 60px;
+      }
+      .miasto {
+        margin-right: 44px;
+      }
+      .adres {
+        margin-right: 50px;
+      }
+      .email {
+        margin-right: 50px;
+      }
+      .haslo {
+        margin-right: 54px;
+      }
+      .checkbox {
+        background-color: #08847c;
+      }
+      .link {
+        color: #08847c;
+      }
+      .button {
+        height: 40px;
+        background-color: #08847c;
+        color: #f6f6f6;
+      }
+    </style>
   </head>
-  <body>
-    <form>
-      <h3>
-        Rejestracja nowego konta
-        <form>
-          <div class="input-container">
-            <label for=""></label>
-            <input type="text" id="" />
-            <span class="star">*</span>
+  <body class="body">
+    <form class="task5Form">
+      <h3>Rejestracja nowego konta</h3>
+      <div class="wrapper">
+        <div class="input-container">
+          <label class="imie" for="imie">Imię:</label>
+          <input class="input" type="text" id="imie" placeholder="imię" />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="nazwisko" for="nazwisko">Nazwisko:</label>
+          <input
+            class="input"
+            type="text"
+            id="nazwisko"
+            placeholder="nazwisko"
+          />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="telefon" for="telefon">Telefon:</label>
+          <input
+            class="input-tel1"
+            type="text"
+            id="telefon"
+            placeholder="nazwisko"
+            value="48"
+          />
+          <input
+            class="input-tel2"
+            type="text"
+            id="Telefon"
+            placeholder="Numer telefonu"
+          />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="kod" for="kod">Kod:</label>
+          <input
+            class="input"
+            type="text"
+            id="kod"
+            placeholder="Kod pocztowy"
+          />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="miasto" for="miasto">Miasto:</label>
+          <input class="input" type="text" id="miasto" placeholder="Miasto" />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="adres" for="adres">Adres:</label>
+          <input class="input" type="text" id="adres" placeholder="Adres" />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="email" for="email">e-mail:</label>
+          <input
+            class="input"
+            type="text"
+            id="email"
+            placeholder="Adres email"
+          />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label class="haslo" for="haslo">Hasło:</label>
+          <input class="input" type="password" id="haslo" placeholder="Hasło" />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <label for="powHaslo">Powtórz hasło:</label>
+          <input
+            class="input"
+            type="password"
+            id="powHaslo"
+            placeholder="Powtórz hasło"
+          />
+          <span class="star"> *</span>
+        </div>
+        <div class="input-container">
+          <div class="checkbox-wrap">
+            <input type="checkbox" id="checkbox" />
+            <label for="checkbox"
+              >Zapoznałem się z treścią
+              <a class="link" href="">relugaminu sklepu internetowego</a>
+            </label>
+            <p><span class="star"> *</span> - pola obowiązkowe</p>
           </div>
-          <div>
-            Nazwisko:
-            <input type="text" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Telefon:
-            <input type="text" />
-            <input type="text" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Kod:<input type="text" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Miasto:
-            <input type="text" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Adres:
-            <input type="text" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            e-mail:
-            <input type="email" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Haslo:
-            <input type="password" />
-            <span class="star">*</span>
-          </div>
-          <div>
-            Powtorz haslo:
-            <input type="password" />
-            <span class="star">*</span>
-          </div>
-        </form>
-      </h3>
+        </div>
+        <div class="input-container"></div>
+        <button type="button" class="button">Dalej</button>
+      </div>
     </form>
   </body>
 </html>
